@@ -7,9 +7,11 @@ import PageRouter from './components/Router';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>  
-    <PageRouter/>
-    <App />
+  // 화면에 보여줘야하는 렌더링할 컴포넌트
+  <React.StrictMode>
+    <PageRouter>
+      <App />
+    </PageRouter>
   </React.StrictMode>
 );
 
