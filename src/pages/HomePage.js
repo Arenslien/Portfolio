@@ -2,6 +2,7 @@ import SecondScreen from '../components/SecondScreen';
 import ThirdScreen from '../components/ThirdScreen';
 import HomeScreen from '../components/HomeScreen';
 import { useEffect, useRef } from 'react';
+import NavigationBoxMenu from '../components/NavigationBoxMenu';
 
 export default function HomePage() {
   const screenRef = useRef([]);
@@ -79,9 +80,12 @@ export default function HomePage() {
 
   return(
     <div>
-      <div ref={el => screenRef.current[0] = el}><HomeScreen/></div>
-      <div ref={el => screenRef.current[1] = el}><SecondScreen/></div>
-      <div ref={el => screenRef.current[2] = el}><ThirdScreen/></div>
+      <header>
+        <NavigationBoxMenu/>
+      </header>
+      <div className="screen" ref={el => screenRef.current[0] = el}><HomeScreen/></div>
+      <div className="screen" ref={el => screenRef.current[1] = el}><SecondScreen/></div>
+      <div className="screen" ref={el => screenRef.current[2] = el}><ThirdScreen/></div>
     </div>
   );
 }

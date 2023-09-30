@@ -15,12 +15,18 @@ body {
   pointer-events: none;
 }
 
+/* Screen CSS */
+.screen {
+  padding-top: 9%;
+}
+
+/* Nav-Box CSS */
 .nav-box {
   background-color: white;
   width: 100%;
-  height: 5%;
-  padding: 2%;
+  padding: 3%;
   align-items: center;
+  position: fixed;
 }
 
 .nav-box-left {
@@ -34,7 +40,7 @@ body {
 }
 
 /* Menu CSS */
-.menu {
+.nav-menu {
   position: fixed;
   z-index: 10;
   display: flex;
