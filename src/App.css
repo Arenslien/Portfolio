@@ -33,6 +33,22 @@ body {
   white-space: nowrap;
 }
 
+/* Menu CSS */
+.menu {
+  position: fixed;
+  z-index: 10;
+  display: flex;
+  background-color: white;
+  width: 500px;
+  /* height: 100%; */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 20px;
+}
+
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
