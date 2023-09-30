@@ -1,10 +1,11 @@
 import SecondScreen from '../components/SecondScreen';
 import ThirdScreen from '../components/ThirdScreen';
 import HomeScreen from '../components/HomeScreen';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 
 export default function HomePage() {
   const screenRef = useRef([]);
+
   
   // UseEffect 선언: []안의 값이 변경될 때 렌더링
   useEffect(() => {
@@ -55,6 +56,26 @@ export default function HomePage() {
       document.removeEventListener("wheel", onWheel);
     }
   });
+
+  useEffect(() => {
+    const onResize = (e) => {
+      // 1.1 화면 크기가 일정 기준에 대해 resize됐는지 파악
+
+
+      // 1.2 변경할 클래스 찾기
+
+      // 1.3 변경할 클래스명 적용
+    }
+
+    // 1. 화면 크기 resize에 대한 이벤트 리스너 등록
+    document.addEventListener("resize", onResize);
+
+    // 2. 이벤트 리스너 등록 해제
+    return () => {
+      document.removeEventListener("resize", onResize);
+    }
+  });
+
 
   return(
     <div>
